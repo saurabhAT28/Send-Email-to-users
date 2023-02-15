@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="container">
+
+		<h1 class="text-center">Welcome Emaill</h1>
+		<form action='/form' method="POST">
+			<div class="mb-3">
+				<label>Username</label>
+				<input type="text" required class="form-control" name="name"  value="{{ user.name }}" readonly>
+			</div>
+			<div class="mb=3">
+				<label>Email</label>
+				<input type="email" required class="form-control" name="email"  value="{{ user.email }}" readonly>
+			<br>
+			</div>
+		</form>
+	</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}
+<title> Data Required </title>
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<h1 class="text-center">Data Required</h1>
+		<form action='/form' method="POST">
+			<div class="mb-3">
+				<label>Username</label>
+				<input type="text" required class="form-control" name="name"  value="{{ form.user.name }}">
+			</div>
+			<div class="mb=3">
+				<label>Email</label>
+				<input type="email" required class="form-control" name="email"  value="{{ form.user.email }}">
+			<br>
+			</div>
+            <div class="mb=3">
+				<label>Company</label>
+				<input type="text" required class="form-control" name="company"  placeholder="eg. Mortgage Kart">
+			<br>
+			</div>
+            <div class="mb=3">
+				<label>Designation</label>
+				<input type="text" required class="form-control" name="designation"  placeholder="eg. SDE Intern">
+			<br>
+			</div>
+            <div class="mb=3">
+				<label>Technology</label>
+				<input type="text" required class="form-control" name="technology"  placeholder="eg. FastAPI">
+			<br>
+			</div>
+			<div class="mb=3">
+				<label>Location</label>
+				<input type="text" required class="form-control" name="location"  placeholder="eg. Pune">
+			<br>
+			</div>
+			<br>
+			<button type="submit" class="btn btn-primary" >Submit</button>
+		</form>
+	</div>
+{% endblock %}

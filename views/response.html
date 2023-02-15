@@ -1,0 +1,42 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+	<div class="container">
+
+		<h1 class="text-center">Form Responses</h1>
+        <h2>Thank you for filling the form</h2>
+		<form action='/form' method="POST">
+			<div class="mb-3">
+				<label>Username</label>
+				<input type="text" required class="form-control" name="name"  value="{{ user.name }}" readonly>
+				<br>
+			</div>
+			<div class="mb=3">
+				<label>Email</label>
+				<input type="email" required class="form-control" name="email"  value="{{ user.email }}" readonly>
+			<br>
+			</div>
+            <div class="mb=3">
+				<label>Company</label>
+				<input type="text" required class="form-control" name="company"  value="{{ user.companyName }}" readonly>
+			<br>
+			</div>
+            <div class="mb=3">
+				<label>Designation</label>
+				<input type="text" required class="form-control" name="designation"  value="{{ user.designation }}" readonly>
+			<br>
+			</div>
+            <div class="mb=3">
+				<label>Technology</label>
+				<input type="text" required class="form-control" name="technology"  value="{{ user.technologyWorkingOn }}" readonly>
+			<br>
+			</div>
+			<div class="mb=3">
+				<label>Location</label>
+				<input type="text" required class="form-control" name="location"  value="{{ user.companyLocation }}" readonly>
+			<br>
+			</div>
+			<br>
+		</form>
+	</div>
+{% endblock %}
